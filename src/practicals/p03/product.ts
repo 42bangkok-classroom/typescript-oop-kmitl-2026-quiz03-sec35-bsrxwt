@@ -10,7 +10,7 @@ export class Product {
       return this.price;  
     }
     setPrice(price: number){
-        this.price = price;
+      return  this.price = price;
    }
 }
 
