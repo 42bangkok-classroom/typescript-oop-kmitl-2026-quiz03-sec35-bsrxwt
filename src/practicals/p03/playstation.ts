@@ -7,7 +7,7 @@ export class Playstation extends Product {
     this.generation = generations;
   }
   getProfile(){
-    return `"${this.name} (GEN ${this.generation})"`
+    return `${this.name} (GEN ${this.generation})`
   }
   getDiscountPrice(){
     return this.price - (this.price * (Playstation.DISCOUNT_PERCENT/100))
