@@ -1,5 +1,15 @@
 import { Product } from './product'
 
 export class Playstation extends Product {
-  // TODO: implement class properties, constructor with super(...), and methods
+  generation:number = 0;
+  constructor(names:string,generations:number,prices:number){
+    super(names,prices)
+    this.generation = generations;
+  }
+  getProfile(){
+    return `${this.name} (${this.generation})`
+  }
+  getDiscountPrice(){
+    return this.price - (this.price * (Playstation.DISCOUNT_PERCENT/100))
+  }
 }
